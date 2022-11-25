@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --text-color: hsl(233, 8%, 62%);
+    --heading-color: hsl(233, 26%, 24%);
+}
+
+* {padding: 0; margin: 0; box-sizing: border-box;}
+html, body {width: 100%;}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+#header {
+    height: 4.5rem;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 5;
+}
+
+#header .request-button {margin-right: 3em;}
+
+.flex {display: flex;}
+.jus-center {justify-content: center;}
+.jus-between {justify-content: space-between;}
+.ali-center {align-items: center;}
+.ali-end {align-items: flex-end;}
+.dir-column {flex-direction: column;}
+
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1440px;
+    border-color: black;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.header-nav a:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 1.5rem;
+    height: 0.2rem;
+    background: #000;
+}
+
+.request-button {
+    border: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    color:   hsl(220, 16%, 96%);
+    padding: 0.8em 2.4em;
+    background: linear-gradient(to right, hsl(136, 65%, 51% ), hsl(192, 70%, 51%));
+    border-radius: 2.5em;
+    cursor: pointer;
+    width: 11.5em;
+}
+
+.default-section {
+    height: 36em;
+    background-color: #FAFAFA;
+}
+
+.default-text-color {
+    color: var(--text-color);
+}
+
+.section-padding-top-6em {padding-top: 6em;}
+
+.intro-section {z-index: 4;}
+
+.section-container {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.intro-section-container {
+    background: url("images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: right -450px;
+    background-position-y: top -255px;
+    position: relative;
+}
+
+.intro-mockup-image {
+    position: absolute;
+    right: -120px;
+    top: -120px;
+}
+
+.intro-content-container {
+    position: relative;
+    top: 10em;
+}
+
+.section-title {
+    font-weight: 300;
+    color: var(--heading-color);
+}
+
+.section-title-size {
+    font-size: 2em; 
+}
+
+.section-text {
+    line-height: 1.5em;
+}
+
+.intro-title {
+    font-size: 3em;
+    inline-size: 10em;
+}
+
+.intro-text {
+    inline-size: 25em;
+    margin: 1em 0 1.5em;
+}
+
+.why-section {
+    background-color: #F4F5F7;
+}
+
+.why-content-container {
+    margin-bottom: 4em;
+}
+
+.why-cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.why-title {margin-bottom: 0.5em;}
+
+.why-text {inline-size: 38em;}
+
+.why-card-title {margin: 1.5em 0;}
+.why-card-text {font-size: 0.85em; inline-size: 16.55em;}
+
+.articles-section {
+    background-color: #FAFAFA;
+    height: 40em;
+}
+.articles-section-title {
+    margin-bottom: 1.5em;
+}
+
+.article-cards-container {display: flex; gap: 1.5em;}
+.article-card {
+    inline-size: 16em;
+    background-color: #FFFFFF;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px hsl(220, 16%, 96%);
+    overflow: hidden;
+}
+.article-card-image {
+    width: 100%;
+    height: 45%;
+}
+.article-card-content {
+    padding: 1.5em 1em 1em;
+}
+.article-card-title {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+.article-card-description {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+.article-author {font-size: 0.7em;}
+
+#footer {
+    background-color: hsl(233, 26%, 24%);
+    height: 9em;
+}
+
+.left-side {
+    width: 50%;
+}
+
+.brand-social, .firts-column, .second-column, .right-side {
+    flex-direction: column;
+}
+
+.footer-links {gap: 6em;}
+
+.footer-links a {
+    margin: 0.5em 0;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #fff;
+}
+
+#footer .request-button {
+    margin-bottom: 2em;
+}
