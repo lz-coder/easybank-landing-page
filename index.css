@@ -3,6 +3,9 @@
 :root {
     --text-color: hsl(233, 8%, 62%);
     --heading-color: hsl(233, 26%, 24%);
+    --button-gradient: linear-gradient(to right, hsl(136, 65%, 51% ), hsl(192, 70%, 51%));
+    --footer-link-color: hsl(136, 65%, 51%);
+    --article-link-color: hsl(192, 70%, 51%);
 }
 
 * {padding: 0; margin: 0; box-sizing: border-box;}
@@ -42,6 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header-nav {
@@ -55,15 +59,19 @@ body {
     font-weight: 300;
     font-size: 0.8em;
 }
+.header-nav a:hover {
+    color: var(--heading-color);
+}
 
 .header-nav a:hover::after {
     display: block;
     content: '';
     position: absolute;
     bottom: 0;
-    width: 1.5rem;
+    width: 4em;
     height: 0.2rem;
-    background: #000;
+    background: var(--button-gradient);
+    margin: 0 auto;
 }
 
 .request-button {
@@ -72,10 +80,14 @@ body {
     font-size: 0.8em;
     color:   hsl(220, 16%, 96%);
     padding: 0.8em 2.4em;
-    background: linear-gradient(to right, hsl(136, 65%, 51% ), hsl(192, 70%, 51%));
+    background: var(--button-gradient);
     border-radius: 2.5em;
     cursor: pointer;
     width: 11.5em;
+}
+
+.request-button:hover {
+    filter: grayscale(60%) contrast(140%);
 }
 
 .default-section {
@@ -187,6 +199,13 @@ body {
     margin: 0.5em 0;
     font-size: 0.9em;
 }
+.article-card-title > a {
+    text-decoration: none;
+    color: inherit;
+}
+.article-card-title > a:hover {
+    color: var(--article-link-color);
+}
 .article-card-description {
     font-size: 0.8em;
     line-height: 1.5em;
@@ -215,6 +234,44 @@ body {
     color: #fff;
 }
 
+#footer a:hover {
+    color: var(--footer-link-color);
+}
+
 #footer .request-button {
     margin-bottom: 2em;
+}
+
+.footer-icon-facebook {
+    mask: url("images/icon-facebook.svg");
+}
+.footer-icon-youtube {
+    mask: url("images/icon-youtube.svg");
+}
+.footer-icon-twitter {
+    mask: url("images/icon-twitter.svg");
+    width: 23px !important;
+}
+.footer-icon-pinterest {
+    mask: url("images/icon-pinterest.svg");
+}
+.footer-icon-instagram {
+    mask: url("images/icon-instagram.svg");
+}
+
+.footer-icon {
+    display: inline-block;
+    background: #fff;
+    mask-size: cover;
+    width: 22px; height: 22px;
+}
+
+.footer-icon {margin: 0 0.3em;}
+
+.footer-icon:last-child, .footer-icon:first-child {
+    margin: 0;
+}
+
+.footer-icon:hover {
+    background: var(--footer-link-color);
 }
