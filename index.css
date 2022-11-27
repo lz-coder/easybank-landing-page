@@ -282,6 +282,24 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .header-nav.responsive {
+        position: absolute;
+        top: 5em;
+        background: #FFFFFF;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 0.2em;
+        padding: 1em 0;
+        box-shadow: 0 3em 6em 1em hsl(233, 8%, 62%);
+    }
+    .header-nav.responsive a {
+        color: var(--heading-color);
+        font-size: 1em;
+        font-weight: 400;
+        padding: 0.8em 1em;
+    }
+
     .why-section, .articles-section {
         height: auto;
     }
