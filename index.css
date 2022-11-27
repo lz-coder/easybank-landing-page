@@ -90,6 +90,8 @@ body {
     filter: grayscale(60%) contrast(140%);
 }
 
+.mobile-menu-button {display: none;}
+
 .default-section {
     height: 36em;
     background-color: #FAFAFA;
@@ -161,7 +163,6 @@ body {
 }
 
 .why-cards-container {
-    display: flex;
     justify-content: space-between;
 }
 
@@ -180,7 +181,7 @@ body {
     margin-bottom: 1.5em;
 }
 
-.article-cards-container {display: flex; gap: 1.5em;}
+.article-cards-container {gap: 1.5em;}
 .article-card {
     inline-size: 16em;
     background-color: #FFFFFF;
@@ -274,4 +275,79 @@ body {
 
 .footer-icon:hover {
     background: var(--footer-link-color);
+}
+
+@media screen and (max-width: 767px) {
+    .why-section, .articles-section {
+        height: auto;
+    }
+    .header-nav {display: none;}
+    #header .request-button {display: none;}
+    .page-container {
+        width: 90%;
+    }
+    .mobile-menu-button {display: block;}
+    .intro-section-container {
+        background: url("images/bg-intro-mobile.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position-y: -50px;
+        background-position-x: 0;
+    }
+    .intro-content-container {
+        top: 18em;
+    }
+    .intro-mockup-image {
+        right: 15px;
+        top: -115px;
+        width: 90%;
+    }
+    .section-title-size {
+        font-size: 1.8em;
+    }
+    .intro-title {
+        font-size: 2em;
+    }
+    .intro-text {margin: 1.5em 0 2.5em;}
+    .intro-text, .why-card-text {
+        font-size: 0.80em;
+    }
+    .intro-content-container, .why-section, .articles-section-title {
+        text-align: center;
+    }
+    .why-text, .intro-title, .intro-text, .why-card-text, .article-card {
+        inline-size: auto;
+    }
+    .why-cards-container, .article-cards-container {
+        flex-direction: column;
+    }
+    .why-cards-container {
+        gap: 2em;
+    }
+    .why-card-title {
+        font-size: 1.1em;
+        margin: 1em 0;
+    }
+    .why-section, .articles-section {
+        padding-bottom: 4em;
+    }
+    .why-text {
+        font-size: 0.85em;
+    }
+
+    #footer {
+        height: auto;
+        padding: 2em 0;
+    }
+    #footer .page-container, .left-side, .right-side, .footer-links {
+        flex-direction: column;
+    }
+    .footer-links {
+        gap: 0;
+        text-align: center;
+        margin: 1em 0;
+    }
+    .left-side {width: auto;}
+    .right-side {align-items: center !important;}
+    .brand-social {gap: 1em;}
 }
