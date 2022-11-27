@@ -83,7 +83,7 @@ body {
     background: var(--button-gradient);
     border-radius: 2.5em;
     cursor: pointer;
-    width: 11.5em;
+    min-width: 11.5em;
 }
 
 .request-button:hover {
@@ -114,9 +114,7 @@ body {
 .intro-section-container {
     background: url("images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
-    background-position: right;
-    background-position-x: right -450px;
-    background-position-y: top -255px;
+    background-position: right -450px top -255px;
     position: relative;
 }
 
@@ -245,25 +243,31 @@ body {
 
 .footer-icon-facebook {
     mask: url("images/icon-facebook.svg");
+    -webkit-mask: url("images/icon-facebook.svg");
 }
 .footer-icon-youtube {
     mask: url("images/icon-youtube.svg");
+    -webkit-mask: url("images/icon-youtube.svg");
 }
 .footer-icon-twitter {
     mask: url("images/icon-twitter.svg");
+    -webkit-mask: url("images/icon-twitter.svg");
     width: 23px !important;
 }
 .footer-icon-pinterest {
     mask: url("images/icon-pinterest.svg");
+    -webkit-mask: url("images/icon-pinterest.svg");
 }
 .footer-icon-instagram {
     mask: url("images/icon-instagram.svg");
+    -webkit-mask: url("images/icon-instagram.svg");
 }
 
 .footer-icon {
     display: inline-block;
     background: #fff;
     mask-size: cover;
+    -webkit-mask-size: cover;
     width: 22px; height: 22px;
 }
 
